@@ -31,12 +31,10 @@ body{
     width: 350px;
 }
 
-.titulo{
-    text-align: center;
-}
-
 .lema{
     text-align: center;
+    margin-top: -15px;
+    
 }
 
 .formulario{
