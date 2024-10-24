@@ -1,16 +1,17 @@
-const btnLogin = document.getElementById('btn-login');
+//const formLogin = document.getElementById('form')
+const btnLogin = document.getElementById('btnLogin');
 
 const validacion = (e) => {
     e.preventDefault();
     const usuario = document.getElementById('usuario');
     const password = document.getElementById('password');
     const celular = document.getElementById('celular');
-    if (usuario.value === "") {
+    if (usuario.value === "" || password.value === "" || celular.value === "") {
         alert("Ingrese sus datos");
         usuario.focus();
         return false;
     }
-    if (password.value === "") {
+    /* if (password.value === "") {
         alert("Ingrese sus datos");
         password.focus();
         return false;
@@ -19,9 +20,9 @@ const validacion = (e) => {
         alert("Ingrese sus datos");
         celular.focus();
         return false;
-    }
+    } */
     
-    return true
+    return true;
 }
 
-btnLogin.addEventListener('click', validate);
+btnLogin.addEventListener('click', validacion);
