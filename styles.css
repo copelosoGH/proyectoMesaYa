@@ -12,7 +12,7 @@ body{
 
 .barraSuperior{
     width: 100%;
-    height: 115px;
+    height: 125px;
     margin: 0;
     background-image: url('/img/mantel-cuadros-rojo-blanco.png');
     
@@ -58,16 +58,52 @@ body{
 }
 
 #btnLogin{
+    width: 150px;
     background-color: rgb(183, 10, 10);
     color: #fff;
-    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
 }
 
 .barraInferior{
     width: 100%;
     height: 125px;
-    
     margin: 0;
     background-image: url('/img/mantel-cuadros-rojo-blanco.png');
     
+}
+
+.btnRegistro{
+    text-align: center;
+    margin: 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+} 
+
+/* DISEÑO PANTALLA RESTAURANTES.HTML */
+.tituloRestaurantes{
+    text-align: center;
+}
+
+.content-rts{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+
+}
+.rts{
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    border: 2px solid ;
+    text-align: center;
+    margin: auto;
+}
+
+div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

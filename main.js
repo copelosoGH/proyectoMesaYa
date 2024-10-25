@@ -9,6 +9,9 @@ const validacion = (e) => {
     if (usuario.value === "" || password.value === "" || celular.value === "") {
         alert("Ingrese sus datos");
         usuario.focus();
+        btnLogin.onclick = function(){
+            window.location.href = "restaurantes.html";
+        }
         return false;
     }
     /* if (password.value === "") {
