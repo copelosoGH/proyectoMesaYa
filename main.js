@@ -29,3 +29,26 @@ const validacion = (e) => {
 }
 
 btnLogin.addEventListener('click', validacion);
+
+
+document.getElementById('formulario').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = {
+      campo1: document.getElementById('campo1').value,
+      campo2: document.getElementById('campo2').value,
+    };
+
+    fetch('http://localhost:3306/formulario', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.text())
+    .then(data => {
+      alert(data);
+    })
+    .catch(error => console.error('Error:', error));
+  });
