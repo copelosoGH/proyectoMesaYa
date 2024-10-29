@@ -11,7 +11,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'conrado',
-  database: 'BDLocal'
+  database: 'mesaya'
 });
 
 db.connect((err) => {
@@ -19,7 +19,23 @@ db.connect((err) => {
   console.log('Conectado a la base de datos SQL');
 });
 
-// Ruta para manejar el formulario
+// Ruta para validar el login
+app.post('/login', (req, res) => {
+  const { usuario, password } = req.body;
+
+  const query = 'SELECT * FROM usuarios WHERE nombre = ? AND password = ?';
+  db.query(query, [usuario, password], (err, results) => {
+    if (err) throw err;
+    
+    if (results.length > 0) {
+      res.send('Usuario autenticado correctamente');
+    } else {
+      res.status(401).send('Usuario o contraseña incorrectos');
+    }
+  });
+});
+
+// Ruta para manejar el formulario de inserción de datos
 app.post('/formulario', (req, res) => {
   const { campo1, campo2 } = req.body;
 
@@ -31,6 +47,6 @@ app.post('/formulario', (req, res) => {
 });
 
 // Inicia el servidor
-app.listen(3306, () => {
-  console.log('Servidor corriendo en http://localhost:3306');
+app.listen(3000, () => {
+  console.log('Servidor corriendo en http://localhost:3000');
 });
