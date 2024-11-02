@@ -82,6 +82,34 @@ body{
 
 } 
 
+/* DISEÑO NAVBAR MENU */
+
+
+#navBarMenu li > a{
+    color: white;
+}
+
+#navBarMenu div{
+    background-color: rgb(224, 4, 4);
+    color: white;
+
+}
+
+#navBarMenu ul{
+    background-color: rgb(224, 4, 4);
+    color: white;
+    text-align: justify;
+}
+
+#navBarMenu button{
+    color: white;
+    background-color: rgb(177, 6, 6);
+    border-color: white;
+}
+
+
+
+
 /* DISEÑO PANTALLA RESTAURANTES.HTML */
 .tituloRestaurantes{
     text-align: center;
