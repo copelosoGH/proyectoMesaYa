@@ -1,10 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
+const cors = require('cors'); // Importa cors
 
 const app = express();
+
+// Configura CORS para permitir solicitudes desde http://127.0.0.1:5500
+app.use(cors({ origin: 'http://127.0.0.1:5500' }));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 
 // Conexión a la base de datos
 const db = mysql.createConnection({
@@ -37,10 +43,10 @@ app.post('/login', (req, res) => {
 
 // Ruta para manejar el formulario de inserción de datos
 app.post('/formulario', (req, res) => {
-  const { campo1, campo2 } = req.body;
+  const { usuario, password } = req.body;
 
-  const query = 'INSERT INTO tu_tabla (campo1, campo2) VALUES (?, ?)';
-  db.query(query, [campo1, campo2], (err, result) => {
+  const query = 'INSERT INTO persona (usuario, password) VALUES (?, ?)';
+  db.query(query, [usuario, password], (err, result) => {
     if (err) throw err;
     res.send('Datos insertados correctamente');
   });
