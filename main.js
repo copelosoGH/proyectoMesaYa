@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Crear el contenido HTML para cada restaurante
       restaurantes.forEach(restaurante => {
         const restauranteHTML = `
-          <a style="text-decoration: none;" href="#">
+          <a style="text-decoration: none;" href="${restaurante.ruta}">
             <div class="restaurante">
               <div class="restaurante_imagen"><img src="${restaurante.imagen}" alt="Imagen del restaurante"></div>
               <div class="restaurante_logo"><img src="${restaurante.imagen_logo}" alt="Logo del restaurante"></div>
