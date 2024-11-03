@@ -6,11 +6,19 @@
       "info": "Bv Galvez 2281, Santa Fe, Santa Fe",
       "ruta":"1980.html"
     },
+
     {
         "imagen": "",
         "imagen_logo": "",
         "nombre": "1980 Bv",
         "info": "Bv Galvez 2281, Santa Fe, Santa Fe"
+    },
+
+      { "imagen": "https://www.buenosbares.com/wp-content/uploads/2024/01/IMG_4109-1050x700.jpg", 
+        "imagen_logo": "https://kentucky.com.ar/imgs/logo_new.svg", 
+        "nombre": "Kentucky ", 
+        "info": "San Martín 3494 , Santa Fe, Santa Fe" 
       }
+    
   ]
   
