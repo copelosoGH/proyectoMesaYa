@@ -27,7 +27,19 @@ async function cargarMesas() {
                 const mesaDiv = document.createElement('div');
                 mesaDiv.classList.add('mesa');
                 mesaDiv.textContent = `Capacidad: ${mesa.capacidad}`;
+                
+                // Establecer color según el estado inicial
                 mesaDiv.style.backgroundColor = mesa.estado === 'disponible' ? 'green' : 'red';
+
+                // Agregar evento click si la mesa está disponible
+                if (mesa.estado === 'disponible') {
+                    mesaDiv.addEventListener('click', () => {
+                        // Cambiar estado visual a "ocupado" y color a rojo
+                        mesaDiv.style.backgroundColor = 'red';
+                        mesa.estado = 'ocupada'; // Actualiza el estado en el objeto si es necesario
+                    });
+                }
+
                 section.appendChild(mesaDiv);
             });
         } else {
