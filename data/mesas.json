@@ -4,19 +4,92 @@
     "nombre": "1980 Bv",
     "mesas": [
       { "estado": "disponible", "capacidad": 2 },
+      { "estado": "disponible", "capacidad": 2 },
       { "estado": "ocupada", "capacidad": 4 },
+      { "estado": "ocupada", "capacidad": 4 },
+      { "estado": "ocupada", "capacidad": 4 },
+      { "estado": "disponible", "capacidad": 4 },
       { "estado": "disponible", "capacidad": 4 },
       { "estado": "ocupada", "capacidad": 2 }
     ]
   },
   {
-    "id": "restaurante_b",
-    "nombre": "Restaurante B",
+    "id": "birrabella",
+    "nombre": "La birra es bella",
     "mesas": [
       { "estado": "disponible", "capacidad": 2 },
+      { "estado": "disponible", "capacidad": 2 },
+      { "estado": "disponible", "capacidad": 2 },
+      { "estado": "disponible", "capacidad": 6 },
       { "estado": "disponible", "capacidad": 6 },
       { "estado": "ocupada", "capacidad": 4 },
       { "estado": "ocupada", "capacidad": 2 }
+    ]
+  },
+  {
+    "id": "kentucky",
+    "nombre": "Kentucky",
+    "mesas": [
+      { "estado": "disponible", "capacidad": 6 },
+      { "estado": "disponible", "capacidad": 6 },
+      { "estado": "disponible", "capacidad": 12 },
+      { "estado": "ocupada", "capacidad": 4 },
+      { "estado": "ocupada", "capacidad": 4 },
+      { "estado": "ocupada", "capacidad": 2 }
+    ]
+  },
+  {
+    "id": "brandon",
+    "nombre": "Brandon",
+    "mesas": [
+      { "estado": "disponible", "capacidad": 3 },
+      { "estado": "disponible", "capacidad": 3 },
+      { "estado": "disponible", "capacidad": 3 },
+      { "estado": "disponible", "capacidad": 19 },
+      { "estado": "ocupada", "capacidad": 9 },
+      { "estado": "ocupada", "capacidad": 9 },
+      { "estado": "ocupada", "capacidad": 9 },
+      { "estado": "ocupada", "capacidad": 4 }
+    ]
+  },
+  {
+    "id": "hifry",
+    "nombre": "Hi-Fry",
+    "mesas": [
+      { "estado": "disponible", "capacidad": 6 },
+      { "estado": "disponible", "capacidad": 6 },
+      { "estado": "disponible", "capacidad": 6 },
+      { "estado": "disponible", "capacidad": 12 },
+      { "estado": "ocupada", "capacidad": 7 },
+      { "estado": "ocupada", "capacidad": 7 },
+      { "estado": "ocupada", "capacidad": 7 },
+      { "estado": "ocupada", "capacidad": 8 }
+    ]
+  },
+  {
+    "id": "bilbao",
+    "nombre": "Bilbao",
+    "mesas": [
+      { "estado": "disponible", "capacidad": 6 },
+      { "estado": "disponible", "capacidad": 6 },
+      { "estado": "disponible", "capacidad": 12 },
+      { "estado": "disponible", "capacidad": 12 },
+      { "estado": "ocupada", "capacidad": 7 },
+      { "estado": "ocupada", "capacidad": 7 },
+      { "estado": "ocupada", "capacidad": 8 }
+    ]
+  },
+  {
+    "id": "lagrieta",
+    "nombre": "La Grieta",
+    "mesas": [
+      { "estado": "disponible", "capacidad": 6 },
+      { "estado": "disponible", "capacidad": 12 },
+      { "estado": "disponible", "capacidad": 12 },
+      { "estado": "ocupada", "capacidad": 7 },
+      { "estado": "ocupada", "capacidad": 7 },
+      { "estado": "ocupada", "capacidad": 7 },
+      { "estado": "ocupada", "capacidad": 8 }
     ]
   }
 ]

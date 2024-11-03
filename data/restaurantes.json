@@ -11,41 +11,47 @@
         "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDPcpIziebZrX351VfgxhnByz9NGdV2a4Q3w&s",
         "imagen_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZh9limyUyEm5PrBnFt-hpRra-eyzuEJwMQ&s",
         "nombre": "La birra es bella",
-        "info": "Balcarce 1681"
+        "info": "Balcarce 1681",
+        "ruta":"birrabella.html"
     },
 
     { "imagen": "https://www.buenosbares.com/wp-content/uploads/2024/01/IMG_4109-1050x700.jpg", 
         "imagen_logo": "https://kentucky.com.ar/imgs/logo_new.svg", 
-        "nombre": "Kentucky ", 
-        "info": "San Martín 3494" 
+        "nombre": "Kentucky", 
+        "info": "San Martín 3494",
+        "ruta":"kentucky.html"
     },
 
     { 
       "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW1CyJaDXpxVLB08M5bwzs0CujH-uhY2_YKg&s", 
         "imagen_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREtYS22lspQsd4c4Ph-Bfr1TepLYdt3tIpuQ&s", 
         "nombre": "Brandon", 
-        "info": " Alberdi 3501" 
+        "info": " Alberdi 3501",
+        "ruta":"brandon.html"
     },
     
     { 
       "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYqNUbGPLnBKuJyX6iw4A1l3-1RWXqEed6OOKwJ0VQjOD4VddQ7dAEpWfC2KFuO2A1R6g&usqp=CAU", 
         "imagen_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQY-ST1-zeA7Ebf5E3q99RpMqDognTBoQjiA&s", 
         "nombre": "Hi-Fry", 
-        "info": "San Martín 3494" 
+        "info": "San Martín 3494",
+        "ruta":"hifry.html"
     },
 
     { 
       "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/T7HH7IPUBNFDPD2CEISXDNHG3M.jpg", 
         "imagen_logo": "https://aehgsantafe.org.ar/img/gastronomia/bares/50.jpg", 
         "nombre": "Bilbao", 
-        "info": "Boulevard Galvez 1099" 
+        "info": "Boulevard Galvez 1099",
+        "ruta":"bilbao.html"
     },
 
     { 
       "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNXlUaOqK-cbCQmBtd_OjtySmg5iL_JHhCuQ&s", 
         "imagen_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX0EfxHK0U8r2IM2zX1N4uBj1u3_yOVvLGBQ&s", 
         "nombre": "La Grieta", 
-        "info": "Marcial Candioti 3137" 
+        "info": "Marcial Candioti 3137",
+        "ruta":"lagrieta.html"
     }
  ]
   
