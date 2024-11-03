@@ -1,3 +1,5 @@
+/*  ---------- Encabezado de página -----------------------------------------------------------------*/
+
 /* DISEÑO NAVBAR MENU */
 body{
     background-color:rgb(255, 222, 6);
@@ -34,12 +36,54 @@ a {
 
 #navBarMenu button{
     color: white;
-    background-color: rgb(177, 6, 6);
+    background-color: rgb(201, 12, 12);
     border-color: white;
 }
 
+/* DISEÑO BARRA DE BÚSQUEDA PRINCIPAL */
+
+#busqueda {
+    display: flex;
+    justify-self: center;
+}
+
+#busqueda input {
+    width: 350px;
+}
+
+#busqueda input:hover {
+    transform: scale(1.05);
+}
+
+#busqueda input:focus {
+    color: rgb(0, 0, 0);
+    border-color: rgb(223, 0, 0);
+    outline-color: rgb(223, 0, 0);
+    box-shadow: -4px -4px 0px rgb(255, 0, 0);
+    transition: .1s;
+    transition-property: box-shadow;
+}
+
+#busqueda button {
+    background-color: rgb(221, 17, 17);
+    color: white;
+    border-color: rgb(210, 9, 9);
+    transition: all ease-in-out 0.2s;
+}
+
+#busqueda button:hover {
+    background-color: red;
+    border-color: rgb(210, 9, 9);
+    transform: scale(1.05);
+}
+
+#busqueda button:active {
+    background-color: red;
+    transform: scale(1);
+}
 
 
+/* ------- Main de página ------------------------------------------------------------------------------------------*/
 
 /* DISEÑO PANTALLA RESTAURANTES.HTML */
 
@@ -91,6 +135,11 @@ section {
     box-shadow: 0px 5px 26px 0px rgb(187, 187, 187);
     text-decoration: none;
     color: #000;
+}
+
+.restaurante:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
 }
 
 .restaurante .restaurante_imagen {
