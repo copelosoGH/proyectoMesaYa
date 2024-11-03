@@ -11,7 +11,8 @@
         "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDPcpIziebZrX351VfgxhnByz9NGdV2a4Q3w&s",
         "imagen_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZh9limyUyEm5PrBnFt-hpRra-eyzuEJwMQ&s",
         "nombre": "La birra es bella",
-        "info": "Balcarce 1681"
+        "info": "Balcarce 1681",
+        "ruta":"birrabella.html"
     },
 
     { "imagen": "https://www.buenosbares.com/wp-content/uploads/2024/01/IMG_4109-1050x700.jpg", 

@@ -10,8 +10,8 @@
     ]
   },
   {
-    "id": "restaurante_b",
-    "nombre": "Restaurante B",
+    "id": "birrabella",
+    "nombre": "La birra es bella",
     "mesas": [
       { "estado": "disponible", "capacidad": 2 },
       { "estado": "disponible", "capacidad": 6 },
