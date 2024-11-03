@@ -43,6 +43,10 @@
     cursor: pointer;
 }
 
+.mesa:hover {
+    transform: scale(1.05);
+}
+
 .mesa.disponible {
     background-color: #4caf50; /* Verde para disponible */
 }
