@@ -1,28 +1,68 @@
-#locales {
+#mesas {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
 }
 
 .local {
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 300px;
+    background-color: #fafafa;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.local:hover {
+    transform: scale(1.05);
 }
 
 .local h2 {
     margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
 }
 
 .mesa {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    color: white;
-    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    margin: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #ffffff;
     text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.mesa.disponible {
+    background-color: #4caf50; /* Verde para disponible */
+}
+
+.mesa.ocupada {
+    background-color: #f44336; /* Rojo para ocupada */
+}
+
+@media (max-width: 768px) {
+    #mesas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .local {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .mesa {
+        
+        font-size: 1em;
+    }
 }
