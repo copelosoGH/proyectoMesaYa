@@ -27,6 +27,8 @@ async function cargarMesas() {
                 const mesaDiv = document.createElement('div');
                 mesaDiv.classList.add('mesa');
                 mesaDiv.textContent = `Capacidad: ${mesa.capacidad}`;
+
+                var seleccion = false; //------------------------------------------------------
                 
                 // Establecer color según el estado inicial
                 mesaDiv.style.backgroundColor = mesa.estado === 'disponible' ? 'green' : 'red';
@@ -35,10 +37,39 @@ async function cargarMesas() {
                 if (mesa.estado === 'disponible') {
                     mesaDiv.addEventListener('click', () => {
                         // Cambiar estado visual a "ocupado" y color a rojo
-                        mesaDiv.style.backgroundColor = 'red';
-                        mesa.estado = 'ocupada'; // Actualiza el estado en el objeto si es necesario
+                        mesaDiv.style.backgroundColor = 'orange';
+                        mesa.estado = 'seleccionada'; // Actualiza el estado en el objeto si es necesario
                     });
                 }
+                if (mesa.estado === 'seleccionada') {
+                    mesaDiv.addEventListener('click', () => {
+                        mesaDiv.style.backgroundColor = 'green';
+                        mesa.estado = 'disponible';
+                    });
+                }
+                if (mesa.estado === 'ocupada') {
+                    mesaDiv.addEventListener('click', () => {
+                        alert("Esta mesa está ocupada, pruebe con otra.")
+                    });
+                }
+
+                /*    FALTA CORREGIRRRRRR -----------------------------------------------------------------------------
+
+                // Una vez terminada la selección de mesa, esta se debe confuirmar (Falta editar la logica)
+                // Primero se confirma de que hay al menos una mesa seleccionada
+                for (let i=0; i<json.mesas.length; i++) {
+                    if (mesa.estado === 'seleccionada'){
+                        var seleccion = true;
+                }
+
+                if (seleccion){
+                    // acá se debería agregar el boton de confirmar para cambiar el estado de la mesa
+                } else {
+                    alert("No hay ninguna mesa seleccionada");
+                }
+
+                */
+
 
                 section.appendChild(mesaDiv);
             });
