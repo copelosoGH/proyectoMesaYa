@@ -28,51 +28,32 @@ async function cargarMesas() {
                 mesaDiv.classList.add('mesa');
                 mesaDiv.textContent = `Capacidad: ${mesa.capacidad}`;
 
-                var seleccion = false; //------------------------------------------------------
+                var seleccion = false;
                 
                 // Establecer color según el estado inicial
                 mesaDiv.style.backgroundColor = mesa.estado === 'disponible' ? 'green' : 'red';
 
                 // Agregar evento click si la mesa está disponible
-                if (mesa.estado === 'disponible') {
-                    mesaDiv.addEventListener('click', () => {
-                        // Cambiar estado visual a "ocupado" y color a rojo
+                mesaDiv.addEventListener('click', () => {
+                    if (mesa.estado === 'disponible') {
                         mesaDiv.style.backgroundColor = 'orange';
-                        mesa.estado = 'seleccionada'; // Actualiza el estado en el objeto si es necesario
-                    });
-                }
-                if (mesa.estado === 'seleccionada') {
-                    mesaDiv.addEventListener('click', () => {
+                        mesa.estado = 'seleccionada';
+                    } else if (mesa.estado === 'seleccionada') {
                         mesaDiv.style.backgroundColor = 'green';
                         mesa.estado = 'disponible';
-                    });
-                }
-                if (mesa.estado === 'ocupada') {
-                    mesaDiv.addEventListener('click', () => {
-                        alert("Esta mesa está ocupada, pruebe con otra.")
-                    });
-                }
-
-                /*    FALTA CORREGIRRRRRR -----------------------------------------------------------------------------
-
-                // Una vez terminada la selección de mesa, esta se debe confuirmar (Falta editar la logica)
-                // Primero se confirma de que hay al menos una mesa seleccionada
-                for (let i=0; i<json.mesas.length; i++) {
-                    if (mesa.estado === 'seleccionada'){
-                        var seleccion = true;
-                }
-
-                if (seleccion){
-                    // acá se debería agregar el boton de confirmar para cambiar el estado de la mesa
-                } else {
-                    alert("No hay ninguna mesa seleccionada");
-                }
-
-                */
-
+                    } else if (mesa.estado === 'ocupada') {
+                        alert("Esta mesa está ocupada, pruebe con otra.");
+                    }
+                });
 
                 section.appendChild(mesaDiv);
             });
+
+            // Almacenar mesas en el objeto `local` para acceso en otras funciones
+            local.mesasDiv = section.querySelectorAll('.mesa');
+
+            // Asignar evento de confirmación al botón
+            document.querySelector('.btnReservar').addEventListener('click', () => confirmarReserva(local));
         } else {
             console.error("No se encontró el restaurante con el ID especificado.");
         }
@@ -81,35 +62,24 @@ async function cargarMesas() {
     }
 }
 
-// Llamada a la función para cargar las mesas al cargar la página
-cargarMesas();
-
-
-
-// Confirmación de la mesa seleccionada
-function confirmarReserva(){
+// Función para confirmar la reserva de mesas seleccionadas
+function confirmarReserva(local) {
     let seleccion = false;
 
-    for (let i=0; i<json.mesas.length; i++) {
-        if (mesa.estado === 'seleccionada'){
+    local.mesas.forEach((mesa, index) => {
+        if (mesa.estado === 'seleccionada') {
             seleccion = true;
+            mesa.estado = 'ocupada';
+            local.mesasDiv[index].style.backgroundColor = 'red';
         }
-    }
-    if (seleccion){
-        // acá se debería agregar el boton de confirmar para cambiar el estado de la mesa
-        for (let i=0; i<json.mesas.length; i++) {
-            if (mesa.estado === 'seleccionada'){
-                mesa.estado === 'ocupada';
-                mesaDiv.style.backgroundColor = 'red';
-            }
-        }
-        alert("Mesa reservada con éxito!")
+    });
+
+    if (seleccion) {
+        alert("¡Su mesa ha sido reservada!");
     } else {
-        alert("No hay ninguna mesa seleccionada");
+        alert("No hay ninguna mesa seleccionada.");
     }
 }
 
-window.onload = function() {
-    const botonReservar = document.querySelector('.btnReservar');
-    botonReservar.addEventListener('click', confirmarReserva);
-};
+// Llamada a la función para cargar las mesas al cargar la página
+cargarMesas();
