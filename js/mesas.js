@@ -41,8 +41,6 @@ async function cargarMesas() {
                     } else if (mesa.estado === 'seleccionada') {
                         mesaDiv.style.backgroundColor = 'green';
                         mesa.estado = 'disponible';
-                    } else if (mesa.estado === 'ocupada') {
-                        alert("Esta mesa está ocupada, pruebe con otra.");
                     }
                 });
 
@@ -65,20 +63,34 @@ async function cargarMesas() {
 // Función para confirmar la reserva de mesas seleccionadas
 function confirmarReserva(local) {
     let seleccion = false;
+    const popupMensaje = document.getElementById('popupMensaje');
 
     local.mesas.forEach((mesa, index) => {
         if (mesa.estado === 'seleccionada') {
             seleccion = true;
             mesa.estado = 'ocupada';
             local.mesasDiv[index].style.backgroundColor = 'red';
+
+            // Posicionar el pop-up dentro de la mesa seleccionada
+            const mesaDiv = local.mesasDiv[index];
+            mesaDiv.appendChild(popupMensaje); // Mueve el pop-up dentro de la mesa
         }
     });
 
     if (seleccion) {
-        alert("¡Su mesa ha sido reservada!");
+        popupMensaje.textContent = "¡Su mesa ha sido reservada!";
+        popupMensaje.classList.add('mostrar');
+        setTimeout(() => {
+            popupMensaje.classList.remove('mostrar');
+        }, 2000); // Oculta el pop-up después de 2 segundos
     } else {
-        alert("No hay ninguna mesa seleccionada.");
+        popupMensaje.textContent = "Mesa ocupada, pruebe con otra.";
+        popupMensaje.classList.add('mostrar');
+        setTimeout(() => {
+            popupMensaje.classList.remove('mostrar');
+        }, 2000);
     }
+    
 }
 
 // Llamada a la función para cargar las mesas al cargar la página

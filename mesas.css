@@ -91,3 +91,47 @@
     border-color: rgb(210, 9, 9);
     transform: scale(1.05);
 }
+
+/* MENSAJE POP UP */
+.mesa {
+    position: relative; /* Asegura que el pop-up se posicione en relación con este contenedor */
+}
+
+.popup-mensaje {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posicionado respecto al div de la mesa */
+    padding: 8px 12px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-width: 200px;
+    width: 180px;
+    text-align: center;
+    /* Centrar en la mesa */
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -150%); /* Ajusta para moverlo hacia arriba desde el centro */
+}
+
+/* Flecha del bocadillo */
+.popup-mensaje::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Ubica la flecha en la parte inferior del pop-up */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #333; /* Color del fondo del bocadillo */
+}
+.popup-mensaje.mostrar {
+    display: block;
+    opacity: 1;
+}
