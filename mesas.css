@@ -51,6 +51,10 @@
     background-color: #4caf50; /* Verde para disponible */
 }
 
+.mesa.seleccionada {
+    background-color: orange; /* Naranja para seleccionar */
+}
+
 .mesa.ocupada {
     background-color: #f44336; /* Rojo para ocupada */
 }
@@ -70,4 +74,20 @@
         
         font-size: 1em;
     }
+}
+
+
+.btnReservar {
+    background-color: #ffffff;
+    border-color: rgb(210, 9, 9);
+    border-radius: 15px;
+    color: #d71a0d;
+    transition: all ease-in-out 0.2s;
+}
+
+
+.btnReservar:hover {
+    background-color: rgb(233, 187, 187)(0, 0, 0);
+    border-color: rgb(210, 9, 9);
+    transform: scale(1.05);
 }

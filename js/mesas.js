@@ -83,3 +83,33 @@ async function cargarMesas() {
 
 // Llamada a la función para cargar las mesas al cargar la página
 cargarMesas();
+
+
+
+// Confirmación de la mesa seleccionada
+function confirmarReserva(){
+    let seleccion = false;
+
+    for (let i=0; i<json.mesas.length; i++) {
+        if (mesa.estado === 'seleccionada'){
+            seleccion = true;
+        }
+    }
+    if (seleccion){
+        // acá se debería agregar el boton de confirmar para cambiar el estado de la mesa
+        for (let i=0; i<json.mesas.length; i++) {
+            if (mesa.estado === 'seleccionada'){
+                mesa.estado === 'ocupada';
+                mesaDiv.style.backgroundColor = 'red';
+            }
+        }
+        alert("Mesa reservada con éxito!")
+    } else {
+        alert("No hay ninguna mesa seleccionada");
+    }
+}
+
+window.onload = function() {
+    const botonReservar = document.querySelector('.btnReservar');
+    botonReservar.addEventListener('click', confirmarReserva);
+};
